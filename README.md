@@ -21,7 +21,7 @@ The project consists of a C++ server, a C# GUI client, and a Python script that 
   <img src="screenshots/Create Room.jpeg" width="400"/>
   <img src="screenshots/Join Room.jpeg" width="400"/>
   <img src="screenshots/High Scores.jpeg" width="400"/>
-  <img src="screenshots/Sequence diagram Frontend Backend.png" width="400"/>
+  <img src="screenshots/Frontend-Backend diagram.png" width="400"/>
 </p>
 
 ---
