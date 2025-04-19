@@ -1,0 +1,63 @@
+﻿<Page x:Class="triviaClientWPF.waitingRoomsForUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:triviaClientWPF"
+        mc:Ignorable="d"
+         Title="waitingRoomsForUser" d:DesignWidth="300">
+
+    <Grid Background="#FF3399FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="waiting Room" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,10" />
+
+        <TextBlock Text="participants:" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Grid.RowSpan="4" />
+        <StackPanel Margin="0,36,0,138" Grid.Row="4" >
+            <ListView x:Name="userList" Height="100" ItemsSource="{Binding m_userList}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="name" DisplayMemberBinding="{Binding name}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <Button Grid.Row="4" Content="Exit" Click="Exit_Click" HorizontalAlignment="center" Margin="10,250,20,10" Padding="20,15" FontSize="20" Background="#FF9933FF" Foreground="White" Height="50" Width="120">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FF9933FF"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="20,15"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="20"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF7B2EFF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF5A1F9C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+    </Page>

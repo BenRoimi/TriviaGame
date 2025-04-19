@@ -1,0 +1,83 @@
+﻿<Page
+  x:Class="triviaClientWPF.MyStatisticsPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
+
+    <Grid Background="#FF3399FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Text="My Statistics" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,10"/>
+
+        <Border Grid.Row="2" Margin="20" Background="Beige" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="Black" BorderThickness="1,1,0,0" CornerRadius="9,0,0,0" Grid.Column="0" Grid.Row="0">
+                    <TextBlock Text="Category" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,1,1,0" CornerRadius="0,9,0,0" Grid.Column="1" Grid.Row="0">
+                    <TextBlock Text="Statistic Data" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="1">
+                    <TextBlock  Text="Average Answer Time" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="1">
+                    <TextBlock x:Name="UserAvrageTime" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="2">
+                    <TextBlock Text="Num of Correct Answers" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="2">
+                    <TextBlock x:Name="userCorrectAnswer" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="3">
+                    <TextBlock Text="Num of Total Answers" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="3">
+                    <TextBlock x:Name="UserTotalAnswer" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="4">
+                    <TextBlock Text="Num of Total Games" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="4">
+                    <TextBlock x:Name="UserTotalGames" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,1" CornerRadius="0,0,0,9" Grid.Column="0" Grid.Row="5">
+                    <TextBlock Text="Player's Total Score" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,1" CornerRadius="0,0,9,0" Grid.Column="1" Grid.Row="5">
+                    <TextBlock x:Name="UserTotalScore" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Button Grid.Row="6" Content="Go Back" Click="GoBack_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" Padding="15,10" FontSize="18" Background="#FF9933FF" Foreground="White"/>
+    </Grid>
+</Page>

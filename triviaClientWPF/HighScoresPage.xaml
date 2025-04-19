@@ -1,0 +1,79 @@
+﻿<Page
+  x:Class="triviaClientWPF.HighScoresPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d">
+
+    <Grid Background="#FF3399FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Text="High Scores" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,10"/>
+
+        <Border Grid.Row="2" Margin="20" Background="Beige" CornerRadius="10" BorderBrush="Black" BorderThickness="1">
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="Black" BorderThickness="1,1,0,0" CornerRadius="9,0,0,0" Grid.Column="0" Grid.Row="0">
+                    <TextBlock Text="Player Name" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,1,1,0" CornerRadius="0,9,0,0" Grid.Column="1" Grid.Row="0">
+                    <TextBlock Text="Score" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="1">
+                    <TextBlock x:Name="player1" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="1">
+                    <TextBlock x:Name="score1" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,0" Grid.Column="0" Grid.Row="2">
+                    <TextBlock x:Name="player2" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1" Grid.Row="2">
+                    <TextBlock x:Name="score2" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,1" CornerRadius="0,0,0,9" Grid.Column="0" Grid.Row="3">
+                    <TextBlock x:Name="player3" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,1" CornerRadius="0,0,9,0" Grid.Column="1" Grid.Row="3">
+                    <TextBlock x:Name="score3" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,1" CornerRadius="0,0,0,9" Grid.Column="0" Grid.Row="3">
+                    <TextBlock x:Name="player4" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,1" CornerRadius="0,0,9,0" Grid.Column="1" Grid.Row="3">
+                    <TextBlock x:Name="score4" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Border BorderBrush="Black" BorderThickness="1,0,0,1" CornerRadius="0,0,0,9" Grid.Column="0" Grid.Row="3">
+                    <TextBlock x:Name="player5" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,1" CornerRadius="0,0,9,0" Grid.Column="1" Grid.Row="3">
+                    <TextBlock x:Name="score5" Padding="10" HorizontalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Button Grid.Row="4" Content="Go Back" Click="GoBack_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" Padding="15,10" FontSize="18" Background="#FF9933FF" Foreground="White"/>
+    </Grid>
+</Page>
